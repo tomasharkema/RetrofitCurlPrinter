@@ -30,6 +30,22 @@ val retrofit = Retrofit.Builder()
   .client(httpClient.build())
 ```
 
+- Import the project
+
+build.gradle
+```gradle
+// Add the dependency
+dependencies {
+  compile 'com.github.tomasharkema:RetrofitCurlPrinter:0.0.1'
+}
+
+// Import jitpack
+repositories {
+  mavenCentral()
+  maven { url "https://jitpack.io" }
+}
+```
+
 - Attach the `RetrofitCurlPrinterInterceptor`
 ```kotlin
 val httpClient = OkHttpClient.Builder()
