@@ -1,5 +1,5 @@
 # RetrofitCurlPrinter
-A interceptor for Retrofit to print curl commands
+A interceptor for Retrofit to print curl commands, written in Kotlin
 
 [![](https://jitpack.io/v/tomasharkema/RetrofitCurlPrinter.svg)](https://jitpack.io/#tomasharkema/RetrofitCurlPrinter)
 
