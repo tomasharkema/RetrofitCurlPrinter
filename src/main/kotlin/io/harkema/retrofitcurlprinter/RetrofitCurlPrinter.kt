@@ -41,6 +41,12 @@ class RetrofitCurlGenerator() {
 
         val body = request.body()
         if (body != null) {
+            if (body.contentType() != null) {
+                command = command.argument("-H", "'Content-Type: ${body.contentType()}'")
+            }
+            if (body.contentLength() != -1.toLong()) {
+                command = command.argument("-H", "'Content-Length: ${body.contentLength()}'")
+            }
             command = command.argument("-d" to "'${body.toCommand()}'")
         }
 
